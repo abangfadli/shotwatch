@@ -11,6 +11,7 @@ void onCreate() {
 		public void onScreenShotTaken(ScreenShotData data) {
 			textView.setText(data.getFileName());
 			imageView.setImageURI(URI.parse(data.getPath());
+		}
 	}
 	
 	mShotWatch = new ShotWatch(getContentResolver(), listener);

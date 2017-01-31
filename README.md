@@ -8,9 +8,9 @@ ShotWatch mShotWatch;
 
 void onCreate() {
 	Listener listener = new Listener() {
-		onScreenShotTaken(ScreenShotData data) {
-		textView.setText(data.getFileName());
-		imageView.setImageURI(URI.parse(data.getPath());
+		public void onScreenShotTaken(ScreenShotData data) {
+			textView.setText(data.getFileName());
+			imageView.setImageURI(URI.parse(data.getPath());
 	}
 	
 	mShotWatch = new ShotWatch(getContentResolver(), listener);

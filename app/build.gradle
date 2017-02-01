@@ -26,6 +26,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
-    compile project(':shotwatch')
+//    compile project(':shotwatch')
+    compile 'com.abangfadli.shotwatch:shotwatch:1.0.1'
     testCompile 'junit:junit:4.12'
 }

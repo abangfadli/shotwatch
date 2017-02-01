@@ -29,4 +29,4 @@ void onPause() {
 ```
 
 ## Gradle
-`compile 'com.abangfadli.shotwatch:shotwatch:1.0.0'`
+`compile 'com.abangfadli.shotwatch:shotwatch:1.0.1'`

@@ -10,6 +10,7 @@ import com.abangfadli.shotwatch.Listener;
 import com.abangfadli.shotwatch.ScreenshotData;
 import com.abangfadli.shotwatch.ShotWatch;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private ShotWatch mShotWatch;

@@ -8,12 +8,12 @@ ext {
     libraryName = 'ShotWatch'
     artifact = 'shotwatch'
 
-    libraryDescription = 'Android Screenshot Watcher (Screenshot Detection) Edit'
+    libraryDescription = 'Android Screenshot Watcher (Screenshot Detection)'
 
     siteUrl = 'https://github.com/abangfadli/shotwatch'
     gitUrl = 'https://github.com/abangfadli/shotwatch.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'abangfadli'
     developerName = 'Ahmad Fadli'
@@ -50,7 +50,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
 }
 

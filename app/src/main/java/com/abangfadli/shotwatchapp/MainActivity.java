@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.abangfadli.shotwatch.Listener;
 import com.abangfadli.shotwatch.ScreenshotData;
 import com.abangfadli.shotwatch.ShotWatch;
 
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mText = (TextView) findViewById(R.id.text);
         mImage = (ImageView) findViewById(R.id.image);
 
-        mShotWatch = new ShotWatch(getContentResolver(), new Listener() {
+        mShotWatch = new ShotWatch(getContentResolver(), new ShotWatch.Listener() {
             @Override
             public void onScreenShotTaken(ScreenshotData screenshotData) {
                 mText.setText(screenshotData.getFileName());

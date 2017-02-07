@@ -25,9 +25,9 @@ public class ScreenShotObserver extends ContentObserver {
     private final String PATH_SCREENSHOT = "screenshots/";
 
     private ContentResolver mContentResolver;
-    private final Listener mListener;
+    private final ShotWatch.Listener mListener;
 
-    public ScreenShotObserver(Handler handler, ContentResolver contentResolver, Listener listener) {
+    public ScreenShotObserver(Handler handler, ContentResolver contentResolver, ShotWatch.Listener listener) {
         super(handler);
         mContentResolver = contentResolver;
         mListener = listener;

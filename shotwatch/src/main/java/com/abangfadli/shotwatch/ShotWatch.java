@@ -38,4 +38,9 @@ public class ShotWatch {
     public void unregister() {
         mContentResolver.unregisterContentObserver(mContentObserver);
     }
+
+
+    public interface Listener {
+        void onScreenShotTaken(ScreenshotData screenshotData);
+    }
 }

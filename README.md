@@ -1,6 +1,8 @@
 # ShotWatch
 Android Screenshot Watcher (Screenshot Detection) using `ContentObserver`
 
+![ShotWatch](https://github.com/abangfadli/shotwatch/raw/master/shotwatch.gif)
+
 ##Usage
 ```java
 ShotWatch mShotWatch;

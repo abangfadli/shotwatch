@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.abangfadli.shotwatchapp">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:minSdkVersion="23"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"

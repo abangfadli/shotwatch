@@ -28,5 +28,10 @@ void onPause() {
 }
 ```
 
+##Permission
+`android.permission.READ_EXTERNAL_STORAGE`
+
+In Android M, you need to handle runtime permission.
+
 ## Gradle
 `compile 'com.abangfadli.shotwatch:shotwatch:1.0.3'`

@@ -36,4 +36,4 @@ void onPause() {
 In Android M, you need to handle runtime permission.
 
 ## Gradle
-`compile 'com.abangfadli.shotwatch:shotwatch:1.0.3'`
+`compile 'com.abangfadli.shotwatch:shotwatch:1.0.4'`

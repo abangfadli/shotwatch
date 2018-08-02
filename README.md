@@ -3,7 +3,7 @@ Android Screenshot Watcher (Screenshot Detection) using `ContentObserver`
 
 ![ShotWatch](https://github.com/abangfadli/shotwatch/raw/master/shotwatch.gif)
 
-##Usage
+## Usage
 ```java
 ShotWatch mShotWatch;
 
@@ -30,7 +30,7 @@ void onPause() {
 }
 ```
 
-##Permission
+## Permission
 `android.permission.READ_EXTERNAL_STORAGE`
 
 In Android M, you need to handle runtime permission.

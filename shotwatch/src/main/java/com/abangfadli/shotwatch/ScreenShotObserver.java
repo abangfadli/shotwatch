@@ -7,6 +7,10 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.MediaStore;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by ahmadfadli on 1/31/17.
@@ -21,8 +25,14 @@ public class ScreenShotObserver extends ContentObserver {
     };
 
     private final String MEDIA_EXTERNAL_URI_STRING = MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString();
-    private final String FILE_NAME_PREFIX = "screenshot";
-    private final String PATH_SCREENSHOT = "screenshots/";
+    private final ArrayList<String> FILE_NAME_PREFIX = new ArrayList<String>(
+            Arrays.asList("screenshot","screenshots", //e.g. SamSung
+                    "capture", "capture+" //e.g. LG
+            ));
+    private final ArrayList<String> PATH_SCREENSHOT = new ArrayList<String>(
+            Arrays.asList("screenshot/","screenshots/", //e.g. SamSung
+                    "capture/","capture+/" //e.g. LG
+            ));
 
     private ContentResolver mContentResolver;
     private final ShotWatch.Listener mListener;
@@ -91,10 +101,24 @@ public class ScreenShotObserver extends ContentObserver {
     }
 
     private boolean isFileScreenshot(String fileName) {
-        return fileName.toLowerCase().startsWith(FILE_NAME_PREFIX);
+        String fileNameLowerCase = fileName.toLowerCase();
+        Log.d("fileNameLowerCase",fileNameLowerCase);
+        for (String str : FILE_NAME_PREFIX) {
+            if (fileNameLowerCase.startsWith(str)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean isPathScreenshot(String path) {
-        return path.toLowerCase().contains(PATH_SCREENSHOT);
+        String pathLowerCase = path.toLowerCase();
+        Log.d("pathLowerCase",pathLowerCase);
+        for (String sPath : PATH_SCREENSHOT) {
+            if (pathLowerCase.contains(sPath)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
